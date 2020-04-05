@@ -18,7 +18,7 @@ const swap = (arr, i, j) => {
 }
 
 const selectionSort = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length-1; i++) {
         let minIndex = getMinIndex(arr, i);
         swap(arr, minIndex, i);
     }
@@ -27,7 +27,9 @@ const selectionSort = (arr) => {
 
 const main = () => {
     let arr = [6, 3, 4, 5, 6, 1, 0, 9, 7]
-    arr = selectionSort(arr);
+    selectionSort(arr);
+    console.clear();
     console.log(arr);
 }
+
 main();
